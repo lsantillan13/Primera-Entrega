@@ -1,0 +1,6 @@
+/*PRODUCTOS*/
+|1|- No se borran los productos;
+
+/*CARRITO*/
+|1|- Al agregar un producto nuevo luego de dar de baja el servidor se sobreescribe el .txt;
+|2| No se borran los productos;
