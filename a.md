@@ -1,0 +1,1 @@
+Te comento algunas cosas sobre la entrega del proyecto. Hay un tema con la persistencia, si yo agrego productos, cierro el server y vuelvo a listarlos, la lista queda vacia. Lo mismo pasa para el carrito

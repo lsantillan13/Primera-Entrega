@@ -11,4 +11,4 @@ const rutas = new Rutas();
  productsRouter.post('/agregar', rutas.guardar);
  productsRouter.put('/actualizar/:id', rutas.actualizar);
  productsRouter.delete('/borrar/:id', rutas.borrar);
-export default productsRouter
+export default productsRouter;

@@ -13,29 +13,25 @@ export class Rutas {
      const id = params.id;
      if (productsArr.length === 0)
      {res.send('<h2>Ooops, it looks like the Cart is quite empty 👀👀</h2>')}
-    //  else if ( id == productsArr) console.log(cartArr[0].productsArr[id].id);
-     else{
-        id == productsArr[id].id ? cartArr.push(productsArr) && res.send({cartArr}) : console.log("Product does not exist");
-        console.log({cartArr})
-     }
-  
-    //  console.log(cartArr[id]["id"]);
-     
+     else{id == productsArr[id].id ? cartArr.push(productsArr[id]) && res.send({cartArr}) : console.log("Product does not exist");}
     }
+    
     listar(req, res) {
-     cartArr.length === 0 ? res.json('No hay productos') : res.json(cartArr)
-     fs.writeFileSync("./data/cart.txt", JSON.stringify(productsArr, 8, "\t"), (err) => {
-     if(err) { console.log(err);}
-     else{console.log("\nFile Contents of file after append:");
-     fs.readFileSync("./data/cart.txt", "utf8")
+    let data = fs.readFileSync('./data/cart.txt', 'utf-8');
+    // let parsed = JSON.parse(data)
+     data.length === 0 ? res.json('No hay productos') : res.send({data});
+     fs.appendFile("./data/cart.txt", JSON.stringify(productsArr, 8, "\t"), (err) => {
+      if(err) { console.log(err);}
+      else{console.log("\nFile Contents of file after append:");
+      fs.readFileSync("./data/cart.txt", "utf8")
     }})};
 
     listarId(req, res) {
      let params = req.params;
      let id = params.id;
      let i = id;
-     id == cartArr[i].id ? res.json(cartArr[i]) : res.json({ Error: 'Producto no encontrado' })
-    };
+     id == cartArr[i].id ? res.json(cartArr[i]) : res.json({ Error: 'Producto no encontrado' });
+    }
 
     // guardar(req, res) {
     //  let { title, price, thumbnail } = req.body;
@@ -45,11 +41,12 @@ export class Rutas {
     // };
 
     borrar(req, res) {
-     let { id } = req.params;
-     const buscar = cartArr.find(producto => producto[id].id == id)
-     if (buscar === undefined) {res.send({ msj: "El producto no existe" })}
-     else {cartArr = cartArr.filter(producto => producto[id].id != id);
-     res.send(buscar);}
+     let params = req.params;
+     let id = params.id;
+     const encontrar = cartArr.find(e => e.id == id);
+      if (encontrar === undefined) {res.send({ msj: "El producto no existe" })}
+      else {cartArr = cartArr.filter(e => e.id != id);
+     res.send(encontrar);}
     };
     
 };

@@ -1,12 +1,20 @@
-const firstArr = [];
-let secondArr = [];
+function People(name, password, isAdmin){
+    this.name = name;
+    this.password = password;
+    this.isAdmin = isAdmin;
 
-let firstContent = {"title": "first", "something": "else"};
-let secondContent = {"title": "second"};
+    this.getUser = function (){
+        console.log(`Nombre: ${name}, Contraseña: ${password}, Status: ${isAdmin}`);
+    }
+}
+let newUser = new People("Lautaro", "pajarito123", true);
+let newUser1 = new People("Juan", "pajarito123", false);
+
+newUser.getUser();
+newUser1.getUser();
 
 
-
-
-module.exports.firstArr = firstArr.push(firstContent);
-module.exports.secondArr = secondArr.push(secondContent);
+// const user = {}
+// const admin = {}
+// const userList = [user, admin];
 
