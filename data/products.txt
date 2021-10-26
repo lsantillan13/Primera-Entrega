@@ -1,1 +1,22 @@
-[[{"title":"helicoptero","price":"123.45","thumbnail":"www.algunaimagen.com","stock":"","description":"descripcion","code":"","id":0,"quantity":1}],{"title":"Producto 0","price":"100","thumbnail":"","stock":"","description":"asd","code":"","id":0,"quantity":1},{"title":"avion","price":"123.45","thumbnail":"www.algunaimagen.com","stock":"","description":"asd","code":"","id":1,"quantity":1},{"title":"Producto 2","price":"100","thumbnail":"","stock":"","description":"asd","code":"","id":2,"quantity":1},{"title":"taxi","price":"123.45","thumbnail":"www.algunaimagen.com","stock":"","description":"asd","code":"","id":3,"quantity":1},{"title":"Producto 4","price":"100","thumbnail":"","stock":"","description":"asd","code":"","id":4,"quantity":1},{"title":"Producto 5","price":"100","thumbnail":"","stock":"","description":"asd","code":"","id":5,"quantity":1},{"title":"Producto 6","price":"100","thumbnail":"","stock":"","description":"asd","code":"","id":6,"quantity":1},{"title":"Producto 7","price":"100","thumbnail":"","stock":"","description":"asd","code":"","id":7,"quantity":1},{"title":"Producto 8","price":"100","thumbnail":"","stock":"","description":"asd","code":"","id":8,"quantity":1}]
+[
+	{
+		"title": "Producto 0",
+		"price": "100",
+		"thumbnail": "",
+		"stock": "",
+		"description": "descripcion",
+		"code": "",
+		"id": 0,
+		"quantity": 1
+	},
+	{
+		"title": "Producto 2",
+		"price": "100",
+		"thumbnail": "",
+		"stock": "",
+		"description": "descripcion",
+		"code": "",
+		"id": 2,
+		"quantity": 1
+	}
+]
